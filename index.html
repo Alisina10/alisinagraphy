@@ -1,0 +1,625 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ali Sina Azad - Full Stack Developer & Drone Pilot</title>
+
+        <!-- SEO Meta Tags -->
+        <meta name="description" content="Ali Sina Jawid's personal website showcasing his work as a Full Stack Developer and content creator.">
+        <meta name="keywords" content="Ali Sina Jawid, Full Stack Developer, content creator,Free Luts, Done Pilot, software engineering, portfolio, web development">
+        
+        <!-- Social Media Meta Tags -->
+        <meta property="og:title" content="Ali Sina Jawid - Full Stack Developer & Content Creator">
+        <meta property="og:description" content="Explore Ali Sina Azad's work in Full Stack development and content creation.">
+        <meta property="og:image" content="path_to_your_image.jpg">
+        <meta property="og:url" content="https://alisinagraphy.com">
+        <meta name="twitter:card" content="summary_large_image">
+
+        <!-- Favicon -->
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+        <!-- Web Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+        <!-- Font Awesome for Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="sina.css" media="all">
+
+        <!-- JavaScript (Deferred) -->
+        <script src="sina.js" defer></script>
+    </head>
+
+    <body>
+        <div id="preloader">
+            <div class="preloader-container">
+                <div class="📦"></div>
+                <div class="📦"></div>
+                <div class="📦"></div>
+                <div class="📦"></div>
+                <div class="📦"></div>
+            </div>
+        </div>
+
+    <!-- Header Section -->
+    <header>
+        <!-- Hamburger Menu Button for Mobile -->
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i> <!-- Hamburger Icon (Font Awesome) -->
+        </div>
+
+        <!-- Mobile Overlay for background dimming effect -->
+        <div class="mobile-overlay" id="mobileOverlay" onclick="toggleMenu()"></div>
+
+        <!-- Normal Navigation (visible on larger screens) -->
+        <nav aria-label="Main Navigation" class="nav-links-container">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#web_developer">Full Stack Developer</a></li>
+                <li><a href="#drone">Drone Videos & Photos</a></li>
+                <li><a href="#photography">Photography</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Mobile Navigation (hidden by default) -->
+        <nav class="mobile-nav" id="mobileNav">
+            <!-- Close Button (X) inside mobile navigation -->
+            <div class="close-btn" onclick="toggleMenu()">
+                <i class="fas fa-times"></i> <!-- Font Awesome "X" icon -->
+            </div>
+
+            <ul>
+                <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#web_developer" onclick="toggleMenu()">Full Stack Developer</a></li>
+                <li><a href="#drone" onclick="toggleMenu()">Drone Videos & Photos</a></li>
+                <li><a href="#photography" onclick="toggleMenu()">Photography</a></li>
+                <li><a href="#shop" onclick="toggleMenu()">shop</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+        <!-- Home Section -->
+        <section id="home">
+            <div class="home-container">
+                <img src="photo/background.jpg" alt="Background Image" class="background-img">
+                <div class="profile-container">
+                    <img src="photo/profile.jpg" alt="Profile Picture" class="profile-pic">
+                    <h1>Ali Sina Jawid</h1>
+                    <p class="profession">
+                        <span id="typed"></span> <!-- This span will be used for the typing effect -->
+                    </p>
+                    <a href="#contact" class="btn">Contact Me</a>
+                </div>
+            </div>
+                </section>
+                
+                                                
+
+            <!-- About Section -->
+            <section id="about">
+                <div class="video-background">
+                    <video id="bg-video" autoplay loop playsinline>
+                        <source src="photo/about.mp4" type="video/mp4">
+                        <img src="photo/fall.jpg" alt="Fallback Image">
+                        Your browser does not support the video tag.
+                    </video>
+                    <button class="mute-button" onclick="toggleMute()">Mute</button>
+                    
+                    <!-- Desktop About Content -->
+                    <div class="about-content">
+                        <div class="image-hover-container">
+                            <img src="photo/about.jpg" alt="Your Image" class="overlay-image">
+                            <span class="hover-message">Thanks for visiting, let me know your thoughts!</span>
+                        </div>
+                        <p>
+                            <p>
+                                <span>I'm</span> <span>Ali</span> <span>Sina</span> <span>Jawid,</span> <span>a</span> <span>Software</span> <span>Engineering</span> <span>sophomore</span> <span>at</span> <span>the</span> <span>American</span> <span>University</span> <span>of</span> <span>Central</span> <span>Asia,</span> <span>specializing</span> <span>in</span> <span>full</span> <span>stack</span> <span>development.</span>
+                                <span>I</span> <span>seamlessly</span> <span>integrate</span> <span>front-end</span> <span>and</span> <span>back-end</span> <span>technologies</span> <span>to</span> <span>deliver</span> <span>comprehensive</span> <span>web</span> <span>solutions.</span>
+                                <span>Beyond</span> <span>coding,</span> <span>I</span> <span>am</span> <span>a</span> <span>drone</span> <span>pilot</span> <span>and</span> <span>photographer,</span> <span>capturing</span> <span>the</span> <span>diverse</span> <span>landscapes</span> <span>of</span> <span>Kyrgyzstan.</span>
+                                <span>Through</span> <span>my</span> <span>videography</span> <span>and</span> <span>photography,</span> <span>I</span> <span>bring</span> <span>the</span> <span>stunning</span> <span>vistas</span> <span>and</span> <span>vibrant</span> <span>culture</span> <span>of</span> <span>the</span> <span>region</span> <span>to</span> <span>life,</span> <span>weaving</span> <span>visual</span> <span>narratives</span> <span>that</span> <span>resonate</span> <span>deeply.</span>
+                                <span>My</span> <span>background</span> <span>in</span> <span>leadership</span> <span>and</span> <span>social</span> <span>activism</span> <span>across</span> <span>Central</span> <span>Asia</span> <span>informs</span> <span>my</span> <span>approach,</span> <span>allowing</span> <span>me</span> <span>to</span> <span>blend</span> <span>technical</span> <span>expertise</span> <span>with</span> <span>creative</span> <span>storytelling</span> <span>in</span> <span>all</span> <span>my</span> <span>projects.</span>
+                                <span>"Dream</span> <span>big</span> <span>and</span> <span>you</span> <span>will</span> <span>achieve</span> <span>more</span> <span>than</span> <span>you</span> <span>ever</span> <span>hoped".</span> <span>SINA</span>
+                            </p>
+                            <p>
+                                <span>#Front-End</span> <span>#Back-End</span> <span>#JavaScript</span> <span>#Python</span> <span>#Dronegraphy</span> <span>Photography</span> <span>#PremierePro</span> <span>#FinalCutPro</span> <span>#PremierePro</span> <span>#Lightroom</span> <span>#Nature</span> <span>#Adventure</span> <span>#Hiking</span>
+                            </p>
+                        </p>
+                        <h5>@alisinagraphy</h5>
+                    </div>
+
+                    <!-- About Section for Mobile -->
+                    <div class="mobile-about-content">
+                        <div class="mobile-image-hover-container">
+                            <img src="photo/about.jpg" alt="Your Image" class="mobile-overlay-image">
+                            <span class="mobile-hover-message">Thanks for visiting, let me know your thoughts!</span>
+                        </div>
+                        <p>
+                            <p>
+                                <span>I'm</span> <span>Ali</span> <span>Sina</span> <span>Jawid,</span> <span>a</span> <span>Software</span> <span>Engineering</span> <span>sophomore</span> <span>at</span> <span>the</span> <span>American</span> <span>University</span> <span>of</span> <span>Central</span> <span>Asia,</span> <span>specializing</span> <span>in</span> <span>full</span> <span>stack</span> <span>development.</span>
+                                <span>I</span> <span>seamlessly</span> <span>integrate</span> <span>front-end</span> <span>and</span> <span>back-end</span> <span>technologies</span> <span>to</span> <span>deliver</span> <span>comprehensive</span> <span>web</span> <span>solutions.</span>
+                                <span>Beyond</span> <span>coding,</span> <span>I</span> <span>am</span> <span>a</span> <span>drone</span> <span>pilot</span> <span>and</span> <span>photographer,</span> <span>capturing</span> <span>the</span> <span>diverse</span> <span>landscapes</span> <span>of</span> <span>Kyrgyzstan.</span>
+                                <span>Through</span> <span>my</span> <span>videography</span> <span>and</span> <span>photography,</span> <span>I</span> <span>bring</span> <span>the</span> <span>stunning</span> <span>vistas</span> <span>and</span> <span>vibrant</span> <span>culture</span> <span>of</span> <span>the</span> <span>region</span> <span>to</span> <span>life,</span> <span>weaving</span> <span>visual</span> <span>narratives</span> <span>that</span> <span>resonate</span> <span>deeply.</span>
+                                <span>My</span> <span>background</span> <span>in</span> <span>leadership</span> <span>and</span> <span>social</span> <span>activism</span> <span>across</span> <span>Central</span> <span>Asia</span> <span>informs</span> <span>my</span> <span>approach,</span> <span>allowing</span> <span>me</span> <span>to</span> <span>blend</span> <span>technical</span> <span>expertise</span> <span>with</span> <span>creative</span> <span>storytelling</span> <span>in</span> <span>all</span> <span>my</span> <span>projects.</span>
+                                <span>"Dream</span> <span>big</span> <span>and</span> <span>you</span> <span>will</span> <span>achieve</span> <span>more</span> <span>than</span> <span>you</span> <span>ever</span> <span>hoped".</span> <span>SINA</span>
+                            </p>
+                            <p>
+                                <span>#Front-End</span> <span>#Back-End</span> <span>#JavaScript</span> <span>#Python</span> <span>#Dronegraphy</span> <span>Photography</span> <span>#PremierePro<span>  </span>#FinalCutPro</span> <span>#PremierePro</span>  <span>#Lightroom</span> <span>#Nature</span> <span>#Adventure</span> <span>#Hiking</span>
+                            </p>
+                            <h5> @alisinagraphy </h5>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Full Stack Developer Section -->
+            <section id="web_developer">
+                <div class="web_developer">
+                     <!-- Video Background -->
+                    <video src="photo/web.mp4" autoplay loop muted playsinline class="web-video"></video>
+
+                    <!-- Separate Welcome Message Container -->
+                    <div class="welcome-container">
+                        <h2 class="welcome-message">I am happy you are here, continue</h2>
+                    </div>
+
+                    <div class="content">
+                        <h2>Coming Soon...</h2>
+                        <h2>Coming Soon...</h2>
+                    </div>
+                </div>
+            </section>
+
+        <section id="drone">
+                    <!-- Background Video -->
+            <video autoplay loop muted playsinline id="background-video">
+                <source src="photo/dronecover.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <!-- Background Image (for mobile screens) -->
+        <img src="photo/dronecover.jpg" alt="Drone Cover Image" id="background-image" />
+            <div class="drone-container">
+                <h1>Drone Love</h1>
+        
+                <!-- Centered Horizontal Video at the Top -->
+                <div class="video-layout">
+                    <div class="video-container horizontal-video">
+                        <iframe src="https://www.youtube.com/embed/_3UthxmduRQ" 
+                                title="Horizontal video" frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+    
+            <!-- Media Container with Photo Gallery and Vertical Videos beside it -->
+            <div class="media-container">
+                <!-- Left Vertical Video (YouTube Short) -->
+                <div class="video-container vertical-video-1">
+                    <iframe src="https://www.youtube.com/embed/9Xn13ySJ8c8" 
+                            title="#shorts #travel" frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+    
+                <!-- Photo Gallery Section -->
+                <div class="photo-gallery">
+                    <div class="gallery">
+                        <img id="dronePhoto" src="photo/photo1.jpg" alt="Drone Photo 1">
+                        <div class="photo-controls">
+                            <button onclick="prevPhoto()">&#9664;</button>
+                            <span id="photoCaption">Drone Photo 1</span>
+                            <button onclick="nextPhoto()">&#9654;</button>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Right Vertical Video (Instagram) -->
+                <div class="video-container vertical-video-2">
+                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C91-uHds3fr/?utm_source=ig_embed&amp;utm_campaign=loading" 
+                                data-instgrm-version="14" style="width: 360px; height: 540px;">
+                    </blockquote>
+                    <script async src="//www.instagram.com/embed.js"></script>
+                </div>
+            </div>
+        </div>
+    </section>
+                      
+
+    <section id="photography" class="container">
+        <!-- Row 1: Nature Photos -->
+        <div class="box">
+            <div class="imgBx">
+                <img src="photography/n1.jpg" alt="Nature 1">
+            </div>
+            <div class="content">
+                <h2>Bostri</h2>
+                <p> Scenic, Vibrant, Resort, Cultural</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBx">
+                <img src="photography/n2.jpg" alt="Nature 2">
+            </div>
+            <div class="content">
+                <h2>Bishkek</h2>
+                <p>Dynamic, Modern, Cultural, Gateway</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBx">
+                <img src="photography/n3.jpg" alt="Nature 3">
+            </div>
+            <div class="content">
+                <h2>Alamedin gorge</h2>
+                <p>Serene, Picturesque, Adventure</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBx">
+                <img src="photography/n4.jpg" alt="Nature 4">
+            </div>
+            <div class="content">
+                <h2>Chunkurchak</h2>
+                <p>Authentic, Rustic, Cozy, Scenic</p>
+            </div>
+        </div>
+    
+        <!-- Row 2: City Photos -->
+        <div class="box">
+            <div class="imgBx">
+                <img src="photography/c1.jpg" alt="City 1">
+            </div>
+            <div class="content">
+                <h2>Bishkek</h2>
+                <p>Pensive, Lonely, Gritty, Melancholic</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBx">
+                <img src="photography/c2.jpg" alt="City 2">
+            </div>
+            <div class="content">
+                <h2>Bishkek</h2>
+                <p>Rainy, United, Strolling, Serene</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBx">
+                <img src="photography/c3.jpg" alt="City 3">
+            </div>
+            <div class="content">
+                <h2>Bishkek</h2>
+                <p>Aged, Laboring, Resilient, Solitary</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBx">
+                <img src="photography/c4.jpg" alt="City 4">
+            </div>
+            <div class="content">
+                <h2>Bishkek</h2>
+                <p>Carefree, Reflective, Bold, Indulgent</p>
+            </div>
+        </div>
+    
+        <!-- Row 3: Mountain Photos -->
+        <div class="box">
+            <div class="imgBx">
+                <img src="photography/m1.jpg" alt="Mountain 1">
+            </div>
+            <div class="content">
+                <h2>Kok-Moinok</h2>
+                <p>Majestic, Rugged, Serene, Vast</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBx">
+                <img src="photography/m2.jpg" alt="Mountain 2">
+            </div>
+            <div class="content">
+                <h2>Kashka Suu</h2>
+                <p>Pristine, Towering, Peaceful, Remote</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBx">
+                <img src="photography/m3.jpg" alt="Mountain 3">
+            </div>
+            <div class="content">
+                <h2>Kok-Moinok</h2>
+                <p>Towering, Peaceful, Wild, Picturesque</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBx">
+                <img src="photography/m4.jpg" alt="Mountain 4">
+            </div>
+            <div class="content">
+                <h2>Kok-Moinok</h2>
+                <p>Adventurous, Energetic, Scenic</p>
+            </div>
+        </div>
+    
+        <!-- Row 4: Cinematic Photos -->
+        <div class="box">
+            <div class="imgBx">
+                <img src="photography/s1.jpg" alt="Cinematic 1">
+            </div>
+            <div class="content">
+                <h2>Kashka Suu</h2>
+                <p>Vivid, Youthful, Bonding, Nostalgic</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBx">
+                <img src="photography/s2.jpg" alt="Cinematic 2">
+            </div>
+            <div class="content">
+                <h2>Bishkek</h2>
+                <p>Ethereal, Sunset, Silhouetted, Calm</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBx">
+                <img src="photography/s3.jpg" alt="Cinematic 3">
+            </div>
+            <div class="content">
+                <h2>Bishkek</h2>
+                <p>Urban, Golden, Quiet, Perspective</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBx">
+                <img src="photography/s4.jpg" alt="Cinematic 4">
+            </div>
+            <div class="content">
+                <h2>Bishkek</h2>
+                <p>Autumn, Wanderer, Reflective, Scenic</p>
+            </div>
+        </div>
+    
+        <!-- Row 5: Max Photos A -->
+        <div class="box">
+            <div class="imgBx">
+                <img src="photography/a1.jpg" alt="Max A 1">
+            </div>
+            <div class="content">
+                <h2>central mosque</h2>
+                <p>lluminated, Majestic, Spiritual</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBx">
+                <img src="photography/a2.jpg" alt="Max A 2">
+            </div>
+            <div class="content">
+                <h2>issykkul</h2>
+                <p>Thrilling, Adventurous, Vibrant</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBx">
+                <img src="photography/a3.jpg" alt="Max A 3">
+            </div>
+            <div class="content">
+                <h2>Bishkek</h2>
+                <p>Rustic, Nature, Textured, Delicate</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBx">
+                <img src="photography/a4.jpg" alt="Max A 4">
+            </div>
+            <div class="content">
+                <h2>Bishkek</h2>
+                <p>Defiant, Bold, Youthful, Expressive</p>
+            </div>
+        </div>
+    
+        <!-- Row 6: Max Photos B -->
+        <div class="box">
+            <div class="imgBx">
+                <img src="photography/b1.jpg" alt="Max B 1">
+            </div>
+            <div class="content">
+                <h2>Bishkek</h2>
+                <p>Hopeful, Floral, Gentle, Expressive</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBx">
+                <img src="photography/b2.jpg" alt="Max B 2">
+            </div>
+            <div class="content">
+                <h2>Bishkek</h2>
+                <p>Worn, Determined, Urban, Struggle</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBx">
+                <img src="photography/b3.jpg" alt="Max B 3">
+            </div>
+            <div class="content">
+                <h2>Bishkek</h2>
+                <p>Minimalist, Poignant, Abstract </p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="imgBx">
+                <img src="photography/b4.jpg" alt="Max B 4">
+            </div>
+            <div class="content">
+                <h2>Bishkek</h2>
+                <p>Reflective, Silhouetted,Sunset</p>
+            </div>
+        </div>
+    </section>
+
+    <script type="text/javascript"
+                    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+            </script>
+            <script type="text/javascript">
+            (function(){
+                emailjs.init({
+                    publicKey: "45MB1GuWA-AWYR0EK",
+                });
+            })();
+            </script>
+
+    <section id="shop" class="shop-container">
+        <h2>Shop - Explore Our Offers</h2>
+        <p>Explore our shop for amazing resources!</p>
+      
+        <div class="shop-grid">
+          <!-- Card 1: Free LUTs -->
+          <div class="shop-card">
+            <img src="photography/ali.webp" alt="Download Free LUTs" class="card-image" />
+            <h3>Free LUTs</h3>
+            <p>Access amazing free LUTs to enhance your videos and photos.</p>
+            <button id="showFormButton" class="btn-action">Download</button>
+      
+            <form id="freeLutForm" class="hidden">
+              <input type="text" id="firstName" placeholder="First Name" required />
+                <input type="text" id="lastName" placeholder="Last Name" required />
+                <input type="email" id="email" placeholder="Email Address" required />
+
+              <button type="submit" class="btn-submit">Submit</button>
+            </form>
+
+            <!-- Success Message -->
+            <div id="successMessage" class="success-message hidden">
+             <p>Thanks for choosing Us! Access your free LUTs <a id="googleDriveLink" href="#" target="_blank"> ⇣ </a> </p>
+             <button onclick="window.open('https://drive.google.com/drive/folders/1MS-DBZ5gHh2VJp2uMKVYL_nIfsRddeE-?usp=sharing', '_blank')"> Link</button></p>
+            </div>
+          </div>
+      
+          <!-- Other Cards -->
+          <div class="shop-card">
+            <img src="photography/ali1.webp" alt="Buy LUTs" class="card-image" />
+            <h3>Buy LUTs</h3>
+            <p>Take your videos to the next level with premium LUTs.</p>
+            <button class="btn-action">Explore LUTs</button>
+          </div>
+      
+          <div class="shop-card">
+            <img src="photography/ok.jpg" alt="Buy Photos" class="card-image" />
+            <h3>Buy Photos</h3>
+            <p>Discover stunning, high-quality photos for your projects.</p>
+            <button class="btn-action">Explore Photos</button>
+          </div>
+      
+          <div class="shop-card">
+            <img src="photography/ok1.jpg" alt="Buy Videos" class="card-image" />
+            <h3>Buy Videos</h3>
+            <p>Get premium videos for your creative work.</p>
+            <button class="btn-action">Explore Videos</button>
+          </div>
+        </div>
+      </section>
+                
+                <script type="text/javascript"
+                    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+            </script>
+            <script type="text/javascript">
+            (function(){
+                emailjs.init({
+                    publicKey: "45MB1GuWA-AWYR0EK",
+                });
+            })();
+            </script>
+      <section id="contact" class="contact-section">
+        <div class="contact-container">
+          <!-- Left Column: Contact Form -->
+          <div class="contact-form">
+            <h2>Contact</h2>
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Email" required />
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Subject" required />
+              </div>
+              <div class="form-group">
+                <label for="purpose">Purpose</label>
+                <select id="purpose" name="purpose" required>
+                  <option value="" disabled selected>Select a Purpose</option>
+                  <option value="web-development">Web Development</option>
+                  <option value="contact-creation">Contact Creation</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Message" rows="4" required></textarea>
+              </div>
+              <button type="submit" class="btn-submit">Send Message</button>
+            </form>
+          </div>
+      
+          <!-- Right Column: Image -->
+          <div class="contact-image">
+            <img src="photography/com.webp" alt="Lion" />
+          </div>
+        </div>
+      </section>
+
+
+
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Comment Section</title>
+        <link rel="stylesheet" href="styles.css"> <!-- Include your CSS file -->
+      </head>
+      <body>
+        <!-- Comment Section -->
+        <section id="comments-section" class="comments-container">
+          <div class="comments-header">
+            <h2>Comments <span id="commentCount">0</span></h2>
+            <p>Leave your thoughts below:</p>
+          </div>
+          <form id="commentForm" class="comment-form">
+            <input type="text" id="nameInput" placeholder="Enter your full name" required />
+            <textarea id="commentInput" placeholder="Write your comment here..." rows="3" required></textarea>
+            <button type="submit" class="btn-submit">Submit</button>
+          </form>
+          <div id="commentList" class="comment-list">
+            <!-- Comments will dynamically appear here -->
+          </div>
+        </section>
+        <script type="module" src="sina.js"></script>
+
+      </body>
+      </html>
+  
+        <!-- Footer Section -->
+        <footer>
+            <div class="social-media">
+                <a href="https://linkedin.com/in/ali-sina-jawid" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+                <a href="https://www.instagram.com/alisinagraphy" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="https://www.youtube.com/@alisinagraphy" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
+                <a href="mailto:alisinagraphy@gmail.com"><i class="fas fa-envelope fa-2x"></i></a>
+            </div>
+            <p class="copyright">&copy; 2024 Ali Sina Jawid. All rights reserved.</p>
+        </footer>
+
+
+    </body>
+    
+    </html>
