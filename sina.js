@@ -678,10 +678,10 @@ document.getElementById('freeLutForm').addEventListener('submit', function (even
 
 
 // Loading 
-/ Loading 
-document.addEventListener("DOMContentLoaded", () => {
+window.onload = () => {
     const preloader = document.getElementById("preloader");
-
+    preloader.style.opacity = "0"; // Begin fade-out animation
+    preloader.style.transition = "opacity 2s ease"; // Adjust fade-out duration
     // Simulate loading completion after 3 seconds
     setTimeout(() => {
         preloader.style.opacity = "0"; // Fade out the preloader
