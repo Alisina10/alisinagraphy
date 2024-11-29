@@ -678,20 +678,18 @@ document.getElementById('freeLutForm').addEventListener('submit', function (even
 
 
 // Loading 
-window.onload = () => {
+document.addEventListener("DOMContentLoaded", () => {
     const preloader = document.getElementById("preloader");
-    preloader.style.opacity = "0"; // Begin fade-out animation
-    preloader.style.transition = "opacity 2s ease"; // Adjust fade-out duration
-    // Simulate loading completion after 3 seconds
+
     setTimeout(() => {
-        preloader.style.opacity = "0"; // Fade out the preloader
+        preloader.style.opacity = "0"; 
         preloader.style.transition = "opacity 0.5s ease";
 
-        // Remove it from the DOM after the transition
+        
         setTimeout(() => {
             preloader.style.display = "none";
-        }, 2000); // Match the fade-out duration
-    }, 5000); // Adjust timeout as needed
+        }, 500);
+    }, 3000); 
 });
 
 
