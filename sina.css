@@ -1792,6 +1792,15 @@ html {
     display: none;
 }
 
+
+        :root {
+            --duration: 1.5s; 
+            --container-size: 250px; 
+            --box-size: 33px;
+            --box-border-radius: 15%; 
+        }
+        
+
 #preloader {
     position: fixed;
     top: 0;
