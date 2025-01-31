@@ -1,8 +1,6 @@
 
 
-// Existing JavaScript Code
 
-// Mobile Menu Toggle Functionality
 function toggleMenu() {
     const mobileNav = document.getElementById('mobileNav');
     const hamburgerMenu = document.querySelector('.hamburger-menu');
@@ -29,13 +27,13 @@ cursorSpan.textContent = "|";
 typedSpan.parentNode.appendChild(cursorSpan);
 
 const totype = ["Full Stack Developer", "Drone Pilot", "Photographer"];
-const delayTyping_char = 90; // Delay between typing each character
-const delayErasing_text = 50; // Delay between erasing each character
-const delayTyping_text = 1500; // Delay before starting to type the next text
-const delayBeforeErase = 1000; // Delay before erasing text
-let totypeIndex = 0; // Index of the text in the array
-let charIndex = 0; // Index of the character being typed
-let isTyping = true; // Flag to track if typing is happening
+const delayTyping_char = 90; 
+const delayErasing_text = 50; 
+const delayTyping_text = 1500; 
+const delayBeforeErase = 1000; 
+let totypeIndex = 0; 
+let charIndex = 0;
+let isTyping = true; 
 
 function typeText() {
     if (charIndex < totype[totypeIndex].length) {
@@ -92,13 +90,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const video = document.getElementById('bg-video');
     const muteButton = document.querySelector('.mute-button');
     const aboutSection = document.getElementById('about');
-    let isMuted = false; // Start with sound enabled
-    let hasVisitedAbout = false; // Track if "About" section was previously visited
+    let isMuted = false; 
+    let hasVisitedAbout = false; 
 
-    // Update mute button text based on initial mute state
+   
     muteButton.textContent = isMuted ? 'Unmute' : 'Mute';
 
-    // Intersection observer to control video playback
+   
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -106,14 +104,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     // Start video with sound on the first visit
                     video.play();
                     video.muted = false;
-                    hasVisitedAbout = true; // Mark "About" as visited
+                    hasVisitedAbout = true; 
                 } else {
-                    // Subsequent visits: play video based on the mute state
+                    
                     video.play();
                     video.muted = isMuted;
                 }
             } else {
-                video.pause(); // Pause when leaving the section
+                video.pause();
             }
         });
     }, { threshold: 0.5 });
@@ -121,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Toggle mute/unmute functionality
     function toggleMute() {
-        isMuted = !isMuted; // Update mute state
+        isMuted = !isMuted; 
         video.muted = isMuted;
         muteButton.textContent = isMuted ? 'Unmute' : 'Mute';
     }
@@ -147,7 +145,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 document.addEventListener("DOMContentLoaded", function () {
     const aboutSection = document.getElementById("about");
     const words = Array.from(document.querySelectorAll("#about .mobile-about-content p span"));
-    let animationRunning = false; // Track if animation is currently running
+    let animationRunning = false; 
     let intervalId;
 
     // Observer to start and stop the animation based on About section visibility
@@ -161,7 +159,7 @@ document.addEventListener("DOMContentLoaded", function () {
             } else {
                 if (animationRunning) {
                     animationRunning = false;
-                    clearInterval(intervalId); // Stop animation when out of view
+                    clearInterval(intervalId); 
                 }
             }
         });
@@ -173,9 +171,9 @@ document.addEventListener("DOMContentLoaded", function () {
         let currentIndex = 0;
 
         function animateNextWord() {
-            if (!animationRunning) return; // Stop if no longer in view
+            if (!animationRunning) return;
 
-            // Reset to start if at the end of words array
+            
             if (currentIndex >= words.length) {
                 currentIndex = 0;
             }
@@ -183,24 +181,24 @@ document.addEventListener("DOMContentLoaded", function () {
             const word = words[currentIndex];
             word.classList.add("animate-charcter");
 
-            // Remove the class after animation completes to enable restart
+            
             setTimeout(() => {
                 word.classList.remove("animate-charcter");
-            }, 700); // Animation duration of 0.7s
+            }, 700); 
 
             currentIndex++;
 
-            // Start the next word slightly before the previous ends for smooth flow
-            setTimeout(animateNextWord, 500); // Delay of 0.5s between words
+            
+            setTimeout(animateNextWord, 500); 
         }
 
         animateNextWord();
 
-        // Loop the entire animation every 15 seconds (adjust based on speed)
+       
         intervalId = setInterval(() => {
             currentIndex = 0;
             animateNextWord();
-        }, words.length * 1500); // 15-second loop duration
+        }, words.length * 1500); 
     }
 });
 
@@ -210,19 +208,19 @@ document.addEventListener("DOMContentLoaded", function () {
     const mobileImage = document.querySelector("#about .mobile-overlay-image");
     const hoverMessage = document.querySelector("#about .mobile-hover-message");
 
-    // Function to add the 'touched' class on touchstart and remove it after a delay
+   
     function handleTouchStart() {
         mobileImage.classList.add("touched");
         hoverMessage.classList.add("touched");
 
-        // Remove the 'touched' class after a timeout to reset
+        
         setTimeout(() => {
             mobileImage.classList.remove("touched");
             hoverMessage.classList.remove("touched");
-        }, 1500); // Duration in ms to keep the class active
+        }, 1500); 
     }
 
-    // Add touch event listener for the image
+  
     if (mobileImage) {
         mobileImage.addEventListener("touchstart", handleTouchStart);
     }
@@ -230,77 +228,77 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-    // JavaScript for photo gallery navigation
+    
 
     
     let currentPhotoIndex = 1;
     const totalPhotos = 9;
     let photoTimer;
 
-    // Function to show the current photo
+    
     function showPhoto(index) {
     const photo = document.getElementById("dronePhoto");
     const caption = document.getElementById("photoCaption");
 
-    // Ensure index wraps around from 1 to 9
+   
     currentPhotoIndex = ((index - 1 + totalPhotos) % totalPhotos) + 1;
 
-    // Update photo and caption with the correct folder path
+    
     photo.src = `photo/photo${currentPhotoIndex}.jpg`;
     caption.innerText = `Drone Photo ${currentPhotoIndex}`;
 }
 
-// Function to go to the previous photo
+
 function prevPhoto() {
     showPhoto(currentPhotoIndex - 1);
     resetTimer();
 }
 
-// Function to go to the next photo
+
 function nextPhoto() {
     showPhoto(currentPhotoIndex + 1);
     resetTimer();
 }
 
-// Function to reset and restart the slideshow timer
+
 function resetTimer() {
     clearInterval(photoTimer);
-    photoTimer = setInterval(nextPhoto, 5000); // Change photo every 5 seconds
+    photoTimer = setInterval(nextPhoto, 5000); 
 }
 
-// Start the slideshow on page load
+
 document.addEventListener("DOMContentLoaded", () => {
-    showPhoto(currentPhotoIndex); // Show the first photo immediately
-    photoTimer = setInterval(nextPhoto, 5000); // Auto-advance every 5 seconds
+    showPhoto(currentPhotoIndex); 
+    photoTimer = setInterval(nextPhoto, 5000);
 });
 
 
 
-// photography section 
+
 
 document.querySelectorAll('.container .box').forEach((box) => {
-    let timeoutId; // Store timeout ID for resetting
+    let timeoutId; 
 
-    // Handle touchstart (trigger animation)
+    
     box.addEventListener('touchstart', () => {
-        // Remove 'touched' class from all other boxes
+        
         document.querySelectorAll('.container .box').forEach((el) => {
             if (el !== box) el.classList.remove('touched');
         });
 
-        // Add 'touched' class to the current box
+        
         box.classList.add('touched');
 
-        // Clear any existing timeout for this box
+       
         clearTimeout(timeoutId);
 
-        // Set a timeout to remove the 'touched' class after 5 seconds
+        
         timeoutId = setTimeout(() => {
             box.classList.remove('touched');
         }, 5000);
     });
 
-    // Handle touchend (reset animation when retouched)
+   
     box.addEventListener('touchend', () => {
         if (box.classList.contains('touched')) {
             box.classList.remove('touched');
@@ -308,11 +306,10 @@ document.querySelectorAll('.container .box').forEach((box) => {
     });
 });
 
-        // Form submission handler
         const showFormButton = document.getElementById('showFormButton');
         const freeLutForm = document.getElementById('freeLutForm');
 
-        // Add a click event listener to toggle the form's visibility
+      
         showFormButton.addEventListener('click', function () {
         if (freeLutForm.classList.contains('hidden')) {
             freeLutForm.classList.remove('hidden');
@@ -363,7 +360,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-// comment section 
 
 // Firebase SDK imports
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
@@ -381,11 +377,11 @@ const firebaseConfig = {
   measurementId: "G-4MLC61H6H6"
 };
 
-// Initialize Firebase
+
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 
-// Emoji list for avatars
+
 const emojis = ["😊", "🙃", "😎", "🤩", "🌟", "🫣", "🔥", "😁", "🦋", "🦖", "🐬"];
 
 // Function to save a comment to Firebase
@@ -395,8 +391,8 @@ function saveComment(name, commentText) {
   set(newCommentRef, {
     name: name,
     text: commentText,
-    likes: 0, // Start with zero likes
-    replies: [], // Start with an empty replies array
+    likes: 0,
+    replies: [], 
     timestamp: new Date().toISOString()
   });
 }
@@ -407,7 +403,7 @@ function loadComments() {
   onValue(commentRef, (snapshot) => {
     const comments = snapshot.val();
     const commentList = document.querySelector(".comment-list");
-    commentList.innerHTML = ""; // Clear existing comments
+    commentList.innerHTML = "";
 
     for (const id in comments) {
       const comment = comments[id];
@@ -492,7 +488,7 @@ function handleLike(id, likeButton) {
     reactionMenu.style.left = `${rect.left + window.scrollX}px`;
     document.body.appendChild(reactionMenu);
   
-    // Remove menu after emoji is selected or on outside click
+    
     const removeMenu = () => {
       reactionMenu.remove();
       document.removeEventListener("click", removeMenu);
@@ -501,28 +497,28 @@ function handleLike(id, likeButton) {
     // Add event listeners for emoji reactions
     reactionMenu.querySelectorAll(".reaction-button").forEach((reactionButton) => {
       reactionButton.addEventListener("click", (e) => {
-        const reaction = e.target.textContent; // Selected emoji
+        const reaction = e.target.textContent; 
         const likeCountElement = likeButton.querySelector(".like-count");
         const newLikes = parseInt(likeCountElement.textContent) + 1;
   
-        // Update likes and emoji in Firebase
+      
         const commentRef = ref(database, `comments/${id}`);
         update(commentRef, { likes: newLikes, emoji: reaction });
   
-        // Update likes count and emoji in UI
+       
         likeButton.innerHTML = `Like ${reaction} (<span class="like-count">${newLikes}</span>)`;
   
         removeMenu();
       });
     });
   
-    // Close the menu on outside click
+   
     setTimeout(() => document.addEventListener("click", removeMenu), 0);
   }
   
   
 
-// Handle reply button functionality
+
 function handleReply(replyButton, commentId, existingReplies) {
   const replySection = replyButton.closest(".comment").querySelector(".reply-section");
   replySection.classList.toggle("hidden");
@@ -534,40 +530,40 @@ function handleReply(replyButton, commentId, existingReplies) {
     const replyText = replyInput.value.trim();
 
     if (replyText) {
-      // Save reply in Firebase
+      
       const newReplies = [...existingReplies, replyText];
       const commentRef = ref(database, `comments/${commentId}`);
       update(commentRef, { replies: newReplies });
 
-      // Add reply to the UI
+  
       const replyContainer = document.createElement("div");
       replyContainer.className = "comment-reply";
       replyContainer.innerHTML = `<span>${replyText}</span>`;
       replySection.parentNode.querySelector(".replies-container").appendChild(replyContainer);
 
-      replyInput.value = ""; // Clear the input field
-      replySection.classList.add("hidden"); // Hide the reply section
+      replyInput.value = "";
+      replySection.classList.add("hidden");
     } else {
       alert("Reply cannot be empty.");
     }
   });
 }
 
-// Update comment count
+
 function updateCommentCount() {
   const commentCountElement = document.querySelector("#commentCount");
   const commentList = document.querySelectorAll(".comment");
   commentCountElement.textContent = commentList.length;
 }
 
-// Add event listener for comment form submission
+
 document.querySelector(".comment-form").addEventListener("submit", (e) => {
-  e.preventDefault(); // Prevent the form from refreshing the page
+  e.preventDefault(); 
   const nameInput = document.getElementById("nameInput").value.trim();
   const commentInput = document.getElementById("commentInput").value.trim();
 
   if (nameInput && commentInput) {
-    saveComment(nameInput, commentInput); // Save the comment to Firebase
+    saveComment(nameInput, commentInput); 
     document.getElementById("nameInput").value = "";
     document.getElementById("commentInput").value = "";
   } else {
@@ -575,7 +571,7 @@ document.querySelector(".comment-form").addEventListener("submit", (e) => {
   }
 });
 
-// Load comments on page load
+
 document.addEventListener("DOMContentLoaded", loadComments);
 
 
@@ -584,32 +580,31 @@ document.addEventListener("DOMContentLoaded", loadComments);
 
 
 
-// form section 
-// Handle form submission
-document.getElementById('contactForm').addEventListener('submit', function (event) {
-    event.preventDefault(); // Prevent the default form submission behavior
 
-    // Collect form data
+document.getElementById('contactForm').addEventListener('submit', function (event) {
+    event.preventDefault(); 
+
+   
     const formData = {
-        name: document.getElementById('fullName').value, // Updated to match HTML ID
+        name: document.getElementById('fullName').value,
         email: document.getElementById('email').value,
         subject: document.getElementById('subject').value,
         purpose: document.getElementById('purpose').value,
         message: document.getElementById('message').value,
     };
 
-    // Replace YOUR_SERVICE_ID and YOUR_TEMPLATE_ID with actual IDs
-    const serviceID = 'service_37cczpk'; // Your EmailJS Service ID
-    const templateID = 'template_3twukxc'; // Your EmailJS Template ID
+   
+    const serviceID = 'service_37cczpk'; 
+    const templateID = 'template_3twukxc'; 
 
-    // Send email
+  
     emailjs.send(serviceID, templateID, formData)
         .then(function (response) {
-            alert('Your message has been sent successfully! | Thanks, we will contact you soon 😊'); // Success alert
-            document.getElementById('contactForm').reset(); // Reset the form
+            alert('Your message has been sent successfully! | Thanks, we will contact you soon 😊'); 
+            document.getElementById('contactForm').reset(); 
         }, function (error) {
-            alert('Failed to send your message. Please try again later.'); // Error alert
-            console.error('EmailJS Error:', error); // Debugging error details
+            alert('Failed to send your message. Please try again later.'); 
+            console.error('EmailJS Error:', error); 
         });
 });
 
@@ -618,56 +613,55 @@ document.getElementById('contactForm').addEventListener('submit', function (even
 
 // Handle form submission for Free LUTs
 document.getElementById('freeLutForm').addEventListener('submit', function (event) {
-    event.preventDefault(); // Prevent default form submission
+    event.preventDefault(); 
 
-    // Collect form data
+   
     const firstName = document.getElementById('firstName').value;
     const lastName = document.getElementById('lastName').value;
     const email = document.getElementById('email').value;
 
-    // Validate fields
+  
     if (!firstName || !lastName || !email) {
         alert('Please fill in all fields.');
         return;
     }
 
-    // Log collected data for debugging
     console.log('Form Data Collected:', { firstName, lastName, email });
 
-    // Prepare email parameters
+
     const emailParams = {
         firstName: firstName,
         lastName: lastName,
         email: email,
     };
 
-    console.log('Email Parameters:', emailParams); // Debugging
+    console.log('Email Parameters:', emailParams); 
 
-    // Send email using EmailJS
+    
     emailjs.send('service_37cczpk', 'template_ytz04uk', emailParams)
         .then(function (response) {
             console.log('Email Sent Successfully:', response.status, response.text);
             alert('Thanks - Enjoy your free LUTs!');
 
-            // Show success message with Google Drive link
+           
             const successMessage = document.getElementById('successMessage');
             const googleDriveLink = document.getElementById('googleDriveLink');
 
-            // Set the Google Drive link dynamically
+         
             const driveLink = 'https://drive.google.com/drive/folders/1MS-DBZ5gHh2VJp2uMKVYL_nIfsRddeE-?usp=sharing';
-            googleDriveLink.href = driveLink; // Set href
-            googleDriveLink.target = '_blank'; // Open in a new tab
-            googleDriveLink.rel = 'noopener noreferrer'; // Security enhancement
+            googleDriveLink.href = driveLink; 
+            googleDriveLink.target = '_blank'; 
+            googleDriveLink.rel = 'noopener noreferrer';
 
-            successMessage.classList.remove('hidden'); // Show success message
+            successMessage.classList.remove('hidden'); 
             successMessage.classList.add('visible');
 
-            // Hide the form
+           
             const form = document.getElementById('freeLutForm');
             form.classList.add('hidden');
             form.classList.remove('visible');
 
-            // Reset the form
+            
             form.reset();
         })
         .catch(function (error) {
@@ -677,20 +671,20 @@ document.getElementById('freeLutForm').addEventListener('submit', function (even
 });
 
 
-// Loading 
+
 document.addEventListener("DOMContentLoaded", () => {
     const preloader = document.getElementById("preloader");
 
-    // Simulate loading completion after 3 seconds
+    
     setTimeout(() => {
-        preloader.style.opacity = "0"; // Fade out the preloader
+        preloader.style.opacity = "0"; 
         preloader.style.transition = "opacity 0.5s ease";
 
-        // Remove it from the DOM after the transition
+       
         setTimeout(() => {
             preloader.style.display = "none";
-        }, 500); // Match the fade-out duration
-    }, 3000); // Adjust timeout as needed
+        }, 500); 
+    }, 3000); 
 });
 
 
